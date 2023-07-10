@@ -1,6 +1,11 @@
+ï»¿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SalesWebMVC.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SalesWebMVCContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SalesWebMVCContext") ?? throw new InvalidOperationException("Connection string 'SalesWebMVCContext' not found.")));
 
-// Adicione serviços ao contêiner.
+// Adicione serviï¿½os ao contï¿½iner.
 builder.Services.AddControllers();
 builder.Services.AddControllersWithViews();
 
@@ -10,7 +15,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure o pipeline de solicitação HTTP.
+// Configure o pipeline de solicitaï¿½ï¿½o HTTP.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
