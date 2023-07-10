@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "FGhiIrU+qKsZ8lFsGeG7fY6oJLygY8j3Ti4YjPiHgVU=",
+  "Hash": "nduTSdSZvjyUa+W7E8s0z5cjnAbpkjxf7MlJ933rkiA=",
   "Source": "SalesWebMVC",
   "BasePath": "_content/SalesWebMVC",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SalesWebMVC\\wwwroot",
+      "Source": "SalesWebMVC",
+      "ContentRoot": "C:\\Workspace\\sales-webAPI\\SalesWebMVC\\SalesWebMVC\\wwwroot\\",
+      "BasePath": "_content/SalesWebMVC",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
